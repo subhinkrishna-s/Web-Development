@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SK - YouTube</title>
+    <link rel="icon" type="image/png" href="images/Youtube-logo.png" sizes="16x16">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="youtube.css">
+</head>
+<body>
+    <div class="container-fluid p-0 page-container">
+        <!-- header of the page start -->
+        <div class="header-row-container">
+            <div class="header-row d-flex justify-content-between align-items-center">
+                <div class="header-nav-area">
+                    <img src="images/menu-w.png" class="yt-menu btn-pointer" onclick="menuItemToggle()" alt="">
+                    <img class="yt-logo" src="images/logo-w.png" onclick="redirectPage()" alt="">
+                </div>
+                <div class="header-search-area">
+                    <input type="text" placeholder="Search" class="searchbox text-light" id="searchText" onkeydown="if (event.keyCode === 13) searchAlert()">
+                    <img src="images/yt-search-icon.png" class="search-btn" onclick="searchAlert()" alt="">
+                    <img src="images/voice-w.png" class="yt-voice-search btn-pointer" onclick="redirectPage()" alt="">
+                </div>
+                <div class="header-icons-area">
+                    <img src="images/yt-search-icon.png" class="mobile-search-btn" onclick="redirectPage()" alt="">
+                    <img src="images/create-reel.png" class="yt-create-reel btn-pointer" onclick="redirectPage()" alt="">
+                    <img src="images/notification.png" class="yt-notification btn-pointer" onclick="redirectPage()" alt="">
+                    <img class="yt-profile-pic rounded-circle btn-pointer" onclick="redirectPage()" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTphKoULHp7BwWGKHtP4rVFgNn7pdRrGmG06FdYsxgNqQ&usqp=CAU&ec=48665698" alt="">
+                </div>
+            </div>
+            <div class="header-category-icons-container w-100" id="header-icons-toggle">
+                <div class="header-category-icons w-100">
+                    <span class="explore-icon">
+                        <a href="youtubeclone.html" target="_blank"><img class="header-explore-icon" src="images/explore-icon-w.png" alt=""> Explore</a>
+                    </span>
+                    <a href="youtubeclone.html" target="_blank" class="bg-light text-dark">All</a>
+                    <a href="youtubeclone.html" target="_blank">Sci-fi films</a>
+                    <a href="youtubeclone.html" target="_blank">Music</a>
+                    <a href="youtubeclone.html" target="_blank">Fast & Furious</a>
+                    <a href="youtubeclone.html" target="_blank">Thrillers</a>
+                    <a href="youtubeclone.html" target="_blank">Mixes</a>
+                    <a href="youtubeclone.html" target="_blank">Melodies</a>
+                    <a href="youtubeclone.html" target="_blank">Motorcycling</a>
+                    <a href="youtubeclone.html" target="_blank">Live</a>
+                    <a href="youtubeclone.html" target="_blank">Football</a>
+                    <a href="youtubeclone.html" target="_blank">Filmi</a>
+                    <a href="youtubeclone.html" target="_blank">Cars</a>
+                    <a href="youtubeclone.html" target="_blank">Marvel</a>
+                    <a href="youtubeclone.html" target="_blank">Health</a>
+                    <a href="youtubeclone.html" target="_blank">Recently uploaded</a>
+
+                    <!-- header category list slider button -->
+                    <div class="scroll-buttons">
+                        <button class="scroll-btn-left" id="scroll-left-btn" type="button"><</button>
+                        <button class="scroll-btn-right" id="scroll-right-btn" onclick="scrollBtn()" type="button">></button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <!-- header of the page end -->
+        <!-- Left default menu bar start -->
+        <div class="menuItems-Container" id="menu-Container-unToggle">
+            <div class="menuItems-card" onclick="redirectPage()">
+                <img src="images/Home-icon-w.png" alt="">
+                <p>Home</p>
+            </div>
+            <div class="menuItems-card" onclick="redirectPage()">
+                <img src="images/Shorts-icon-w.png" alt="">
+                <p>Shorts</p>
+            </div>
+            <div class="menuItems-card" onclick="redirectPage()">
+                <img src="images/Subscriptions-icon-w.png" alt="">
+                <p>Subscriptions</p>
+            </div>
+            <div class="menuItems-card" onclick="redirectPage()">
+                <img src="images/Library-icon-w.png" alt="">
+                <p>Library</p>
+            </div>
+        </div>
+        <!-- Left default menu bar end -->
+        <!-- Left extended menu bar start -->
+        <div class="menuItems-Container-Toggle" id="menu-Container-Toggle">
+            <div class="menuItems-card-Toggle d-flex align-items-center bg-dark" onclick="redirectPage()">
+                <img src="images/Home-icon-w.png" alt="">
+                <p>Home</p>
+            </div>
+            <div class="menuItems-card-Toggle d-flex align-items-center" onclick="redirectPage()">
+                <img src="images/Shorts-icon-w.png" alt="">
+                <p>Shorts</p>
+            </div>
+            <div class="menuItems-card-Toggle d-flex align-items-center" onclick="redirectPage()">
+                <img src="images/Subscriptions-icon-w.png" alt="">
+                <p>Subscriptions</p>
+            </div>
+            <div class="menuItems-Container-Toggle-category">
+                <div class="menuItems-card-Toggle d-flex align-items-center" onclick="redirectPage()">
+                    <img src="images/Library-icon-w.png" alt="">
+                    <p>Library</p>
+                </div>
+                <div class="menuItems-card-Toggle d-flex align-items-center" onclick="redirectPage()">
+                    <img src="images/History-icon-w.png" alt="">
+                    <p>History</p>
+                </div>
+                <div class="menuItems-card-Toggle d-flex align-items-center" onclick="redirectPage()">
+                    <img src="images/YourVideos-icon-w.png" alt="">
+                    <p>Your videos</p>
+                </div>
+                <div class="menuItems-card-Toggle d-flex align-items-center" onclick="redirectPage()">
+                    <img src="images/WatchLater-icon-w.png" alt="">
+                    <p>Watch later</p>
+                </div>
+                <div class="menuItems-card-Toggle d-flex align-items-center" onclick="redirectPage()">
+                    <img src="images/LikedVideos-icon-w.png" alt="">
+                    <p>Liked videos</p>
+                </div>
+                <div class="menuItems-card-Toggle d-flex align-items-center" onclick="redirectPage()">
+                    <img src="images/showMore-icon-w.png" alt="">
+                    <p>Show more</p>
+                </div>
+            </div>
+            <div class="menuItems-Container-Toggle-category">
+                <h4>Explore</h4>
+                <div class="menuItems-card-Toggle d-flex align-items-center" onclick="redirectPage()">
+                    <img src="images/Trending-icon-w.png" alt="">
+                    <p>Trending</p>
+                </div>
+                <div class="menuItems-card-Toggle d-flex align-items-center" onclick="redirectPage()">
+                    <img src="images/shopping-icon-w.png" alt="">
+                    <p>Shopping</p>
+                </div>
+                <div class="menuItems-card-Toggle d-flex align-items-center" onclick="redirectPage()">
+                    <img src="images/music-icon-w.png" alt="">
+                    <p>Music</p>
+                </div>
+                <div class="menuItems-card-Toggle d-flex align-items-center" onclick="redirectPage()">
+                    <img src="images/movies&shows-icon-w.png" alt="">
+                    <p>Movies & shows</p>
+                </div>
+                <div class="menuItems-card-Toggle d-flex align-items-center" onclick="redirectPage()">
+                    <img src="images/live-icon-w.png" alt="">
+                    <p>Live</p>
+                </div>
+                <div class="menuItems-card-Toggle d-flex align-items-center" onclick="redirectPage()">
+                    <img src="images/gaming-icon-w.png" alt="">
+                    <p>Gaming</p>
+                </div>
+                <div class="menuItems-card-Toggle d-flex align-items-center" onclick="redirectPage()">
+                    <img src="images/news-icon-w.png" alt="">
+                    <p>News</p>
+                </div>
+                <div class="menuItems-card-Toggle d-flex align-items-center" onclick="redirectPage()">
+                    <img src="images/sports-icon-w.png" alt="">
+                    <p>Sports</p>
+                </div>
+                <div class="menuItems-card-Toggle d-flex align-items-center" onclick="redirectPage()">
+                    <img src="images/learning-icon-w.png" alt="">
+                    <p>Learning</p>
+                </div>
+                <div class="menuItems-card-Toggle d-flex align-items-center" onclick="redirectPage()">
+                    <img src="images/fashionbeauty-icon-w.png" alt="">
+                    <p>Fashion & beauty</p>
+                </div>
+            </div>
+            <div class="menuItems-Container-Toggle-category">
+                <h4>More from YouTube</h4>
+                <div class="menuItems-card-Toggle d-flex align-items-center" onclick="redirectPage()">
+                    <img src="images/yt-premium.png" alt="">
+                    <p>Youtube Premium</p>
+                </div>
+                <div class="menuItems-card-Toggle d-flex align-items-center" onclick="redirectPage()">
+                    <img src="images/yt-studio.png" alt="">
+                    <p>Youtube Studio</p>
+                </div>
+                <div class="menuItems-card-Toggle d-flex align-items-center" onclick="redirectPage()">
+                    <img src="images/yt-music.png" alt="">
+                    <p>Youtube Music</p>
+                </div>
+                <div class="menuItems-card-Toggle d-flex align-items-center" onclick="redirectPage()">
+                    <img src="images/yt-kids.png" alt="">
+                    <p>Youtube Kids</p>
+                </div>
+            </div>
+            <div class="menuItems-Container-Toggle-category">
+                <div class="menuItems-card-Toggle d-flex align-items-center" onclick="redirectPage()">
+                    <img src="images/setting-w.png" alt="">
+                    <p>Settings</p>
+                </div>
+                <div class="menuItems-card-Toggle d-flex align-items-center" onclick="redirectPage()">
+                    <img src="images/report-w.png" alt="">
+                    <p>Report history</p>
+                </div>
+                <div class="menuItems-card-Toggle d-flex align-items-center" onclick="redirectPage()">
+                    <img src="images/History-icon-w.png" alt="">
+                    <p>Help</p>
+                </div>
+                <div class="menuItems-card-Toggle d-flex align-items-center" onclick="redirectPage()">
+                    <img src="images/feedback-w.png" alt="">
+                    <p>Send feedback</p>
+                </div>
+            </div>
+            <div class="menuItems-Container-Toggle-category">
+                <div class="menuItems-footer">
+                    <a href="youtubeclone.html" target="_blank">About</a><a href="youtubeclone.html" target="_blank">Press</a><a href="youtubeclone.html" target="_blank">Copyright</a><br><a href="youtubeclone.html" target="_blank">Contact_us</a><a href="youtubeclone.html" target="_blank">Creator</a><a href="youtubeclone.html" target="_blank">Advertise</a><br><a href="youtubeclone.html" target="_blank">Developers</a>
+                </div>
+                <div class="menuItems-footer">
+                    <a href="youtubeclone.html" target="_blank">Terms</a><a href="youtubeclone.html" target="_blank">Privacy</a><a href="youtubeclone.html" target="_blank">Policy & Safety</a><a href="youtubeclone.html" target="_blank">How YouTube works</a><a href="youtubeclone.html" target="_blank">Test new features</a>
+                </div>
+                <div class="menuItems-footer">
+                    <p onclick="redirectPage()">Subhin Krishna - © 2023 Google LLC</p>
+                </div>
+            </div>
+        </div>
+        <!-- Left extended menu bar end -->
+        <!-- Youtube videos feed start -->
+        <div class="" id="videos-feed-toggle">
+            <div class="videos-feed d-flex flex-wrap">
+                <!-- code for youtube video cards and shorts feed container start -->
+                <!-- code for 1st youtube video card start -->
+                <div class="yt-card card border-0 col-12 col-md-4 col-lg-3 flex-grow-1 text-white p-0" onclick="redirectPage()">
+                    <img class="card-img-top rounded yt-card-img" src="https://i.ytimg.com/vi/hvSDbX790rI/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCRgrGaURLd3heoLGBpojC4Ff7Dnw" alt="">
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <img class="yt-card-channel rounded-circle" src="https://yt3.ggpht.com/pqcX6z1Rxn4Z90NGIF6UbVlZ5G2GU0XN1B2Anv9ppEyxh1I1c7dUqna1t4uO3rsbQaOjJk7I=s68-c-k-c0x00ffffff-no-rj" alt="">
+                            <p class="yt-card-badge fw-500">4:04</p>
+                            <div class="card-body-title-area">
+                                <h6 class="fw-bold card-body-title">IT WILL GIVE YOU GOOSEBUMPS - Cristiano Ronaldo Motivational video  | Greatest footballer All Time</h6>
+                                <p>Above Hustle <br>1.4M views . 7 months ago</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- code for 1st youtube video card end -->
+                <div class="yt-card card border-0 col-12 col-md-4 col-lg-3 flex-grow-1 text-white p-0" onclick="redirectPage()">
+                    <img class="card-img-top rounded yt-card-img" src="https://i.ytimg.com/vi/BhRBrzrEVuA/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAJ7nSM4Rd6SwKJ9drHEPXZYrgC1g" alt="">
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <img class="yt-card-channel rounded-circle" src="https://yt3.ggpht.com/WzQZRVhTbEAv806bHWpgjV7RU1nM1ZorsrRJENg7_7xQeAdwYPjILEtrdnKPy3_5SckHrOUyPrI=s68-c-k-c0x00ffffff-no-rj" alt="">
+                            <p class="yt-card-badge fw-500">25:22</p>
+                            <div class="card-body-title-area">
+                                <h6 class="fw-bold card-body-title">JDM രാജാക്കന്മാരുടെ SHOW Vandified 1 Year Anniversary Episode | വണ്ടിfied | Nissan R34 | Supra Turbo</h6>
+                                <p>VANDIFIED <br> 236K views . 1 year ago</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="yt-card card border-0 col-12 col-md-4 col-lg-3 flex-grow-1 text-white p-0" onclick="redirectPage()">
+                    <img class="card-img-top rounded yt-card-img" src="https://i.ytimg.com/vi/t1XCzWlYWeA/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB-ewJQe8CvQFnCQQtg3GwtT7WWgQ" alt="">
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <img class="yt-card-channel rounded-circle" src="https://yt3.ggpht.com/M_xZT_pxAppsRpIMP5ZC5BfRrQZW_1eBZYsEK0OGr_5jVp6lSj_1a3nawY-PHqwwDXHmt0vEo7g=s48-c-k-c0x00ffffff-no-rj" alt="">
+                            <p class="yt-card-badge fw-500">6:32</p>
+                            <div class="card-body-title-area">
+                                <h6 class="fw-bold card-body-title">IT WILL GIVE YOU GOOSEBUMPS - Elon musk Motivational video</h6>
+                                <p>Mindset Mentor <br> 10M views . 2 years ago</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="yt-card card border-0 col-12 col-md-4 col-lg-3 flex-grow-1 text-white p-0" onclick="redirectPage()">
+                    <img class="card-img-top rounded yt-card-img" src="https://i.ytimg.com/vi/NMThdHhrLoM/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCOkzQok7mrBN7X2t6hbc_oJKPUHQ" alt="">
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <img class="yt-card-channel rounded-circle" src="https://yt3.ggpht.com/9A8laQB5A79---Whp5G_5DDfOCMeELLKPCBVTATkFrKvU5-DFC2QEFmNeG9AzyIa18s03PjS=s68-c-k-c0x00ffffff-no-rj" alt="">
+                            <p class="yt-card-badge fw-500">1:51</p>
+                            <div class="card-body-title-area">
+                                <h6 class="fw-bold card-body-title">BUGATTI CHIRON Pur Sport: ‘C’ the Drift</h6>
+                                <p>Bugatti <br> 2.1M views . 4 months ago</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="yt-card card border-0 col-12 col-md-4 col-lg-3 flex-grow-1 text-white p-0" onclick="redirectPage()">
+                    <img class="card-img-top rounded yt-card-img" src="https://i.ytimg.com/vi/QxZ1saVdV20/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAeV0-zVUDzJN4EDTC33mCR2OmXjQ" alt="">
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <img class="yt-card-channel rounded-circle" src="https://yt3.ggpht.com/ytc/AGIKgqNHD7WDNecgWJqgILM27L5Tn4dJM1zUCkv5RdHx=s48-c-k-c0x00ffffff-no-rj" alt="">
+                            <p class="yt-card-badge fw-500">9:08</p>
+                            <div class="card-body-title-area">
+                                <h6 class="fw-bold card-body-title">Champion Mindset - Cristiano Ronaldo Motivational Video | 2021 Motivation Speech</h6>
+                                <p>Offbeat Speeches <br> 79K views . 1 year ago</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="yt-card card border-0 col-12 col-md-4 col-lg-3 flex-grow-1 text-white p-0" onclick="redirectPage()">
+                    <img class="card-img-top rounded yt-card-img" src="https://i.ytimg.com/vi/6-whKiFobys/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLC0EateS_u_auJflIkNRb02xKjNnA" alt="">
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <img class="yt-card-channel rounded-circle" src="https://yt3.ggpht.com/ytc/AGIKgqO6C7NwYofGtN5goUiG6DhzLt-kSguTmeEczJofssA=s48-c-k-c0x00ffffff-no-rj" alt="">
+                            <p class="yt-card-badge fw-500">10:00</p>
+                            <div class="card-body-title-area">
+                                <h6 class="fw-bold card-body-title">F1-Inspired Hot Rod With A Honda S2000 VTEC Engine | Top Gear American Tuned ft. Rob Dahm</h6>
+                                <p>Top Gear <br> 2.5M views . 10 months ago</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- code for shorts-feed container start -->
+                <div class="shorts-container w-100">
+
+                    <span class="p-1 ps-3 d-flex align-items-center text-light" id="shortHideUndo">This will take 30 days to update in your Account<h6 class="ps-3 text-primary m-0" style="cursor: pointer;" onclick="openShortsContainer()">Undo</h6></span>
+
+                    <!-- short feed header start -->
+                    <div class="shorts-container-header d-flex justify-content-between align-items-center w-100" id="shorts-container-header">
+
+                        <!-- shorts feed header icon and title -->
+                        <div class="shorts-container-header-icon d-flex align-items-center w-100">
+                            <img src="images/yt-shorts.png" alt="" onclick="redirectPage()">
+                            <h4 style="cursor: pointer;" onclick="redirectPage()">Shorts</h4>
+                        </div>
+
+                        <!-- shorts feed header close button -->
+                        <img style="cursor: pointer;" src="images/yt-close-w.png" onclick="closeShortsContainer()" alt="">
+
+                    </div>
+                    <!-- short feed header end -->
+                    <!-- shorts video content start -->
+                    <div class="shorts-container-feed d-flex  m-0 p-0 w-100" id="shorts-container-feed">
+
+                        <!-- code for youtube shorts card -->
+                        <div class="card yt-short col-6 col-md-4 col-lg-2 p-0" onclick="redirectPage()">
+                            <img class="card-img-top rounded" src="https://i.ytimg.com/vi/mcPKxVqfXnk/oar2.jpg?sqp=-oaymwEaCJUDENAFSFXyq4qpAwwIARUAAIhCcAHAAQY=&rs=AOn4CLAJ-kj2J6YLnpCjoiFp9UUtqoLSUQ">
+                            <div class="yt-short-desc">
+                                <h6>Ironman #ironmanstatus #ironman3 #avengersinfinitywar #robertdowneyjr #robertdowney</h6>
+                                <p>363 views</p>
+                            </div>
+                        </div>
+                        <div class="card yt-short col-6 col-md-4 col-lg-2 p-0" onclick="redirectPage()">
+                            <img class="card-img-top rounded" src="https://i.ytimg.com/vi/_mgeHLtq3XM/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLCEwRT0x87NZ8g62_ti3GA6jEoDWg">
+                            <div class="yt-short-desc">
+                                <h6>എന്ത് പോക്കാ പോയത് 🔥 മമ്മൂക്ക | Mammootty Dulquer salman car</h6>
+                                <p>1.1M views</p>
+                            </div>
+                        </div>
+                        <div class="card yt-short col-6 col-md-4 col-lg-2 p-0" onclick="redirectPage()">
+                            <img class="card-img-top rounded" src="https://i.ytimg.com/vi/IHPT4I1sVg8/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDUc0hKAXOwjacfA2QG9auYfztU-g">
+                            <div class="yt-short-desc">
+                                <h6>ironman 4 suit up new  || ironman 4 fanmade tony stark #avengers #ironman</h6>
+                                <p>1.4K views</p>
+                            </div>
+                        </div>
+                        <div class="card yt-short col-6 col-md-4 col-lg-2 p-0" onclick="redirectPage()">
+                            <img class="card-img-top rounded" src="https://i.ytimg.com/vi/eTk6ZroGcuA/oar2.jpg?sqp=-oaymwEaCIwDENAFSFXyq4qpAwwIARUAAIhCcAHAAQY=&rs=AOn4CLDKkQT2iLjd8TYxFwoQ5Crb-NKN0Q">
+                            <div class="yt-short-desc">
+                                <h6>#വെള്ള അടിച്ചാലും വെറുതെ വിടില്ല 🥺 ഇതാണോ സർക്കാർ വാഹനങ്ങൾ മാത്രമേ നിയമ പരമായി SERVICE നടത്തുന്നെ🤢🤬🤮</h6>
+                                <p>724K views</p>
+                            </div>
+                        </div>
+                        <div class="card yt-short col-6 col-md-4 col-lg-2 p-0" onclick="redirectPage()">
+                            <img class="card-img-top rounded" src="https://i.ytimg.com/vi/I2UckTmkYGM/oar2.jpg?sqp=-oaymwEaCJUDENAFSFXyq4qpAwwIARUAAIhCcAHAAQY=&rs=AOn4CLDHyTfcDNK2rhZ9V_GsL3nqYJdcnA">
+                            <div class="yt-short-desc">
+                                <h6>toyota supra - 1st one in india</h6>
+                                <p>764K views</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- shorts video content end -->
+
+                    <!-- shorts container dropdown footer -->
+                    <div class="shorts-footer text-center py-2" onclick="redirectPage()" id="shorts-footer">
+                        <img src="images/expand-down-w.png" alt="">
+                    </div>
+
+                </div>
+                <!-- code for shorts-feed container end -->
+                <div class="yt-card card border-0 col-12 col-md-4 col-lg-3 flex-grow-1 text-white p-0" onclick="redirectPage()">
+                    <img class="card-img-top rounded yt-card-img" src="https://i.ytimg.com/vi/JjZJ39D-COQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDtMScyeAoqKZFw3cGCpBdPbsrgTQ" alt="">
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <img class="yt-card-channel rounded-circle" src="https://yt3.ggpht.com/hAG9fMc_9AlJSzpJBYcpJOI_yddw9MtgOhQlUqk_3O69o5-HFU6xpp44PuAmMZsU8DmERP0WNw=s68-c-k-c0x00ffffff-no-rj" alt="">
+                            <p class="yt-card-badge fw-500">1:57</p>
+                            <div class="card-body-title-area">
+                                <h6 class="fw-bold card-body-title">ആട് ജീവിതം ട്രൈലെർ കണ്ടപ്പോൾ എന്ത് തോന്നി? തഗ് മറുപടി കൊടുത്ത് വിക്രം | Vikram Thug | Aadu Jeevitham</h6>
+                                <p>Cinehoods <br> 91K views . 1 day ago</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="yt-card card border-0 col-12 col-md-4 col-lg-3 flex-grow-1 text-white p-0" onclick="redirectPage()">
+                    <img class="card-img-top rounded yt-card-img" src="https://i.ytimg.com/vi/hZhWeiO1Twc/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC0HV30UsNqrcizbR49zsmpAsogRw" alt="">
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <img class="yt-card-channel rounded-circle" src="https://yt3.ggpht.com/hS4pvsB3_1pjyg_Mf-Hkxb30hzS1jCE4ShHXI_x5khsxiOZO9m14UCb6ityw_cMRMIQ3m_M1=s48-c-k-c0x00ffffff-no-rj" alt="">
+                            <p class="yt-card-badge fw-500">23:20</p>
+                            <div class="card-body-title-area">
+                                <h6 class="fw-bold card-body-title">Prithviraj Sukumaran Interview | Part 1 | Maneesh Narayanan | Kaapa | The Cue Studio</h6>
+                                <p>cue studio <br> 222K views . 4 months ago</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="yt-card card border-0 col-12 col-md-4 col-lg-3 flex-grow-1 text-white p-0" onclick="redirectPage()">
+                    <img class="card-img-top rounded yt-card-img" src="https://i.ytimg.com/vi/1ORo06DhFrY/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBEmmJgMBC-K5c-QyllLlm7Gbi1CA" alt="">
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <img class="yt-card-channel rounded-circle" src="https://yt3.ggpht.com/INLpai6N3w7kMFNMdK5nT8v9Ab1T1mg0wzYfPPSaXwe1_r0_BXTkQMyjwh6oXu5kziLCpkZM=s68-c-k-c0x00ffffff-no-rj" alt="">
+                            <p class="yt-card-badge fw-500">35:59</p>
+                            <div class="card-body-title-area">
+                                <h6 class="fw-bold card-body-title">Dhyan Sreenivasan Exclusive Special Interview | Sreenivasan | Mohanlal | Parvathy | Milestone Makers</h6>
+                                <p>Milestone Makers <br>  views . 7 days ago</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="yt-card card border-0 col-12 col-md-4 col-lg-3 flex-grow-1 text-white p-0" onclick="redirectPage()">
+                    <img class="card-img-top rounded yt-card-img" src="https://i.ytimg.com/vi/PM-X6WF0S40/hq720.jpg?sqp=-oaymwE2CNAFEJQDSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARhVIGUoWzAP&rs=AOn4CLBn1tS2W-yOMcmDZQ4vHNsJlM9o3w" alt="">
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <img class="yt-card-channel rounded-circle" src="https://yt3.ggpht.com/ytc/AGIKgqOJ54nLThb1cmSdJMW6oyqhCnL-ym_1t4jmKf9TaA=s68-c-k-c0x00ffffff-no-rj" alt="">
+                            <p class="yt-card-badge fw-500">7:07</p>
+                            <div class="card-body-title-area">
+                                <h6 class="fw-bold card-body-title">Paul Walker Visits Famous Nissan Skyline GT-R Tuner Mine's in Japan - GTChannel</h6>
+                                <p>GTChannel <br> 35M views . 12 year ago</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="yt-card card border-0 col-12 col-md-4 col-lg-3 flex-grow-1 text-white p-0" onclick="redirectPage()">
+                    <img class="card-img-top rounded yt-card-img" src="https://i.ytimg.com/vi/atUC7ZxJodE/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDIEyv1MXRL7VCs5N2QLC-ldhPYPA" alt="">
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <img class="yt-card-channel rounded-circle" src="https://yt3.ggpht.com/ytc/AGIKgqPez46suoEBBaybxSaEkS2IMGIFwMlOcLPEknTs4g=s68-c-k-c0x00ffffff-no-rj" alt="">
+                            <p class="yt-card-badge fw-500">25:22</p>
+                            <div class="card-body-title-area">
+                                <h6 class="fw-bold card-body-title">Dulquer Salmaan Tames the Audi RS e-tron GT at Dubai's Autodrome Circuit</h6>
+                                <p>TopGear Mag India <br> 463K views . 3 weeks ago</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="yt-card card border-0 col-12 col-md-4 col-lg-3 flex-grow-1 text-white p-0" onclick="redirectPage()">
+                    <img class="card-img-top rounded yt-card-img" src="https://i.ytimg.com/vi/mWXEa0UbvRI/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDsS4V5N8Y1NDvAxx_bLeTdTdPTaA" alt="">
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <img class="yt-card-channel rounded-circle" src="https://yt3.ggpht.com/ytc/AGIKgqO6C7NwYofGtN5goUiG6DhzLt-kSguTmeEczJofssA=s48-c-k-c0x00ffffff-no-rj" alt="">
+                            <p class="yt-card-badge fw-500">12:49</p>
+                            <div class="card-body-title-area">
+                                <h6 class="fw-bold card-body-title">This 1968 Dodge Charger Has A 1000bhp 'Hellephant' Engine | Top Gear American Tuned ft. Rob Dahm</h6>
+                                <p>Top Gear <br> 844K views . 3 months ago</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="yt-card card border-0 col-12 col-md-4 col-lg-3 flex-grow-1 text-white p-0" onclick="redirectPage()">
+                    <img class="card-img-top rounded yt-card-img" src="https://i.ytimg.com/vi/AHObvUJR4fc/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDHO_4R9k8bI9ChgselzVskdYZeQA" alt="">
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <img class="yt-card-channel rounded-circle" src="https://yt3.ggpht.com/M_xZT_pxAppsRpIMP5ZC5BfRrQZW_1eBZYsEK0OGr_5jVp6lSj_1a3nawY-PHqwwDXHmt0vEo7g=s48-c-k-c0x00ffffff-no-rj" alt="">
+                            <p class="yt-card-badge fw-500">8:00</p>
+                            <div class="card-body-title-area">
+                                <h6 class="fw-bold card-body-title">Cristiano Ronaldo's Will Leave You SPEECHLESS | One of the Best Motivational Video</h6>
+                                <p>Mindset Mentor <br> 1.5M views . 1 year ago</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="yt-card card border-0 col-12 col-md-4 col-lg-3 flex-grow-1 text-white p-0" onclick="redirectPage()">
+                    <img class="card-img-top rounded yt-card-img" src="https://i.ytimg.com/vi/921VbEMAwwY/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBUpHwGcm5GQvWXPo32H-LHcQIg8g" alt="">
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <img class="yt-card-channel rounded-circle" src="https://yt3.ggpht.com/ytc/AGIKgqNkWE6UluS_QIRfl-sROCVu3KWszlWfFFTfZsLTnG4=s68-c-k-c0x00ffffff-no-rj" alt="">
+                            <p class="yt-card-badge fw-500">5:10</p>
+                            <div class="card-body-title-area">
+                                <h6 class="fw-bold card-body-title">Starship Mission to Mars</h6>
+                                <p>SpaceX <br> 2.3M views . 11 days ago</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="yt-card card border-0 col-12 col-md-4 col-lg-3 flex-grow-1 text-white p-0" onclick="redirectPage()">
+                    <img class="card-img-top rounded yt-card-img" src="https://i.ytimg.com/vi/QYia1ahU850/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCGxho0qm33U2t3JhEeRlvIbYJB8w" alt="">
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <img class="yt-card-channel rounded-circle" src="https://yt3.ggpht.com/InQirkFjbqoQWgX-u_WgDZ81jEBsypWkYdTSel-fCtNtTs8G8YdUleGlSDFaT705mECANGwBmw=s68-c-k-c0x00ffffff-no-rj" alt="">
+                            <p class="yt-card-badge fw-500">4:04</p>
+                            <div class="card-body-title-area">
+                                <h6 class="fw-bold card-body-title">മരണ മാസ്സ്🔥ഓരോ ആനകളും വ്യത്യസ്ത രീതിയിൽ തൊഴുതുന്നത് കണ്ടോ..👌👌💖 നെമ്മാറ വേല 2023🔥🔥</h6>
+                                <p>ആനപ്രേമി നെമ്മാറക്കാരൻ <br> 1.2K views . 5 days ago</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="yt-card card border-0 col-12 col-md-4 col-lg-3 flex-grow-1 text-white p-0" onclick="redirectPage()">
+                    <img class="card-img-top rounded yt-card-img" src="https://i.ytimg.com/vi/DRr5SlpTlEU/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDWWVp0aNhEMJTC5lRErdd_EG5plw" alt="">
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <img class="yt-card-channel rounded-circle" src="https://yt3.ggpht.com/ytc/AGIKgqMRqu3X2utBvsytUCZ3ENdalVhnkpQTy1bLn2_1=s68-c-k-c0x00ffffff-no-rj" alt="">
+                            <p class="yt-card-badge fw-500">12:41</p>
+                            <div class="card-body-title-area">
+                                <h6 class="fw-bold card-body-title">OLD SCHOOL vs NEW SCHOOL.. 700HP MK4 SUPRA vs 550HP MK5 SUPRA</h6>
+                                <p>OFFICIALLY GASSED <br> 2M views . 10 months ago</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="yt-card card border-0 col-12 col-md-4 col-lg-3 flex-grow-1 text-white p-0" onclick="redirectPage()">
+                    <img class="card-img-top rounded yt-card-img" src="https://i.ytimg.com/vi/35npVaFGHMY/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCSg2S5l_kVMK5l3BPxllb3z2wkWw" alt="">
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <img class="yt-card-channel rounded-circle" src="https://yt3.ggpht.com/ytc/AGIKgqM3kpAMpZeso6x3IiT-uHxjmZAaPAAM4W8d7UHb=s48-c-k-c0x00ffffff-no-rj" alt="">
+                            <p class="yt-card-badge fw-500">3:16</p>
+                            <div class="card-body-title-area">
+                                <h6 class="fw-bold card-body-title">Welcome to India ! [CINEMATIC TRAVEL FILM]</h6>
+                                <p>Hugo Moussy <br> 7.9M views . 2 years ago</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="yt-card card border-0 col-12 col-md-4 col-lg-3 flex-grow-1 text-white p-0" onclick="redirectPage()">
+                    <img class="card-img-top rounded yt-card-img" src="https://i.ytimg.com/vi/Zf87y5bWzUA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCtrmBcMv57VHs5t9FBC-R-V7SQlQ" alt="">
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <img class="yt-card-channel rounded-circle" src="https://yt3.ggpht.com/ytc/AGIKgqMmsR23C_lpoQiwsixqAo9aC6SdT-JxZJ9NGtHBpA=s68-c-k-c0x00ffffff-no-rj" alt="">
+                            <p class="yt-card-badge fw-500">18:47</p>
+                            <div class="card-body-title-area">
+                                <h6 class="fw-bold card-body-title">It Will Give You Goosebumps | Elon Musk (Motivational Video)</h6>
+                                <p>Motivation Madness <br> 1M views . 4 months ago</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="yt-card card border-0 col-12 col-md-4 col-lg-3 flex-grow-1 text-white p-0" onclick="redirectPage()">
+                    <img class="card-img-top rounded yt-card-img" src="https://i.ytimg.com/vi/G3ZI3t2FCnk/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBbCmwxGxrUXPo6_84Vy7RqY7mjBA" alt="">
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <img class="yt-card-channel rounded-circle" src="https://yt3.ggpht.com/ytc/AGIKgqMbHTtweb6pr19262rGain9-khk-P6KVH7dkrxGCA=s68-c-k-c0x00ffffff-no-rj" alt="">
+                            <p class="yt-card-badge fw-500">21:32</p>
+                            <div class="card-body-title-area">
+                                <h6 class="fw-bold card-body-title">KTM RC CUP Final Race! Can we bring the Cup to Kerala?</h6>
+                                <p>CluthLess <br> 87K views . 2 weeks ago</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="yt-card card border-0 col-12 col-md-4 col-lg-3 flex-grow-1 text-white p-0" onclick="redirectPage()">
+                    <img class="card-img-top rounded yt-card-img" src="https://i.ytimg.com/vi/FKnnuRaKg7Y/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAOISmTywv0U0Cr3M2CpKIT28Zgnw" alt="">
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <img class="yt-card-channel rounded-circle" src="https://yt3.ggpht.com/ytc/AGIKgqOqTrXAvx6ppSlcgNIgvQWD0MBFqchn8lOTjCL_Ig=s68-c-k-c0x00ffffff-no-rj" alt="">
+                            <p class="yt-card-badge fw-500">11:59</p>
+                            <div class="card-body-title-area">
+                                <h6 class="fw-bold card-body-title">Jayaram's epic speeches from PS 1 & PS 2 | Ponniyin Selvan  - Throwback | Sun TV</h6>
+                                <p>Sun TV <br> 4.4K views . 1 hour ago</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>                                      
+                <div class="yt-card card border-0 col-12 col-md-4 col-lg-3 flex-grow-1 text-white p-0" onclick="redirectPage()">
+                    <img class="card-img-top rounded yt-card-img" src="https://i.ytimg.com/vi/AP2fPLGWhpA/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDDZzNCfFIZ1-kkBVn5RjUoU0AX_Q" alt="">
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <img class="yt-card-channel rounded-circle" src="https://yt3.ggpht.com/ytc/AGIKgqOP_8G7oM3iTK7MuK9_jZZZ0jug7SX8vk5ZLYAyHqY=s68-c-k-c0x00ffffff-no-rj" alt="">
+                            <p class="yt-card-badge fw-500">1:30</p>
+                            <div class="card-body-title-area">
+                                <h6 class="fw-bold card-body-title">Hero Cars | Part 01| Dulquer Salmaan #editiondQ #carguyscarguy #youngtimer #collector #e46 #bmw</h6>
+                                <p>Dulquer Salmaan <br> 199K views . 6 months ago</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- code for youtube video cards and shorts feed container end -->
+            </div>
+        </div>
+        <!-- Youtube videos feed end -->
+    </div>
+    <script src="youtube.js"></script>
+</body>
+</html>

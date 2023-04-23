@@ -1,0 +1,1063 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+.header{
+    width: 100%;
+    background-position: right top;
+    background-size: cover;
+    background-image: linear-gradient(0deg,
+    rgba(0, 0, 0, 0.175),
+    rgb(0, 0, 0, 0.25)), url('https://cnbl-cdn.bamgrid.com/assets/60c53d45f6f0546647ddd4e006a207c713d149586cea401fdc0152f2fa9263a6/original');
+    /* background-image: url("https://cnbl-cdn.bamgrid.com/assets/60c53d45f6f0546647ddd4e006a207c713d149586cea401fdc0152f2fa9263a6/original"); */
+    
+}
+.header-icon{
+    display: flex;
+    justify-content: space-between;
+    height: 74px;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 586px){
+    .header-head{
+        width: 100%;
+    }
+    .logo{
+        width: 61px;
+        height: 24px;
+        margin: 15px 30px;
+    }
+    .header-head h3{
+        color: #a8afbd;
+        font-size: 15px;
+        padding: 18px 45px;
+    }
+    .header-tag h5{
+        color: #00d876;
+        font-weight: 800;
+        margin: 0;
+        margin-top: 52px;
+        text-align: center;
+        font-size: 12.4px;
+        width: 100%;
+    }
+    .header-body{
+        width: 100%;
+        text-align: center;
+    }
+    .bundle-img{
+        width: 603px;
+        height: 135.41px;
+    }
+    .header-body h3{
+        color: white;
+        font-size: 26px;
+    }
+    .header-body button{
+        background-color: #00d876;
+        border: none;
+        padding: 15px 285px;
+        border-radius: 5px;
+        font-weight: 750;
+    }
+    .header-body p{
+        color: white;
+        text-decoration: underline;
+        font-size: 14.5px;
+    }
+    .header-body h4{
+        color: white;
+        text-decoration: underline;
+        font-weight: 400;
+    }
+    .header-ribbon{
+        width: 100%;
+        height: 137.98px;
+        display: flex;
+        padding: 25px 40px;
+        box-sizing: border-box;
+        background-color: transparent;
+    }
+    .bundle-h5{
+        display: none;
+    }
+    .header-ribbon img{
+        width: 311.5px;
+        height: 87.98px;
+    }
+    .ribbon-desc{
+        padding: 0 100px 0 30px;
+    }
+    .ribbon-desc h5{
+        display: none;
+    }
+    .ribbon-desc h3{
+        color: white;
+        font-size: 24px;
+    }
+    .ribbon-btns{
+        text-align: center;
+        padding: 20px 8px 0 90px;
+    }
+    .ribbon-btns button{
+        color: white;
+        background-color: transparent;
+        padding: 10px 24px;
+        font-size: 14px;
+        font-weight: bold;
+        border: 2px solid white;
+        border-radius: 5px;
+    }
+    .ribbon-btns p{
+        color: white;
+        text-decoration: underline;
+        font-size: 10px;
+    }
+    .container{
+        width: 100%;
+        height: fit-content;
+        background-color: #0b0c0f;
+        padding-top: 88px;
+        padding-bottom: 70px;
+        position: relative;
+    }
+    .container-desc h1{
+        font-size: 48px;
+    }
+    .container-desc p{
+        font-size: 16px;
+    }
+    .container-card{
+        height: 420px;
+        display: flex;
+        justify-content: space-around;
+        padding: 10px 50px;
+        box-sizing: border-box;
+    
+    }
+    .card-session{
+        display: flex;
+        justify-content: space-around;
+        width: 50%;
+    }
+    .card{
+        position: relative;
+        height: 295px;
+        box-sizing: border-box;
+        margin:10px;
+    
+    }
+    .card img{
+        height: 395px;
+        filter: brightness(50%);
+        box-sizing: border-box;
+    }
+    .intro{
+        padding: 200px ;
+        height: 500px;
+        color: white;
+        text-align: center;
+    }
+    .intro h5{
+        font-size: 14px;
+        color: #00d876;
+    }
+    .intro h1{
+        font-size: 48px;
+    }
+    .intro p{
+        font-size: 18px;
+        width: 690px;
+        margin: 0 auto;
+    }
+    .intro h6{
+        font-size: 10px;
+        width: 690px;
+        margin: 0 auto;
+        font-weight: 400;
+        color: #ffffff99;
+    }    
+    .intro h4{
+        font-size: 16px;
+        text-decoration: underline;
+    }
+    .livesports{
+        color: #ffffff;
+        width: 100%;
+        height: 700px;
+        background-image: url('https://cnbl-cdn.bamgrid.com/assets/b8c6dfb74d0a755e8df205721c87b1f8b74821b4229c78492ecca29a2635db9e/original');
+        background-repeat: no-repeat;
+        background-size:  cover;
+        box-sizing: border-box;
+        padding: 200px 0 0 190px;
+    }
+    .livesports-tabs{
+        width: 100%;
+        display: flex;
+        box-sizing: border-box;
+    }
+    .livesports h1{
+        font-size: 48px;
+        margin-top: 25px;
+    }
+    .livesports p{
+        font-size: 16px;
+        margin-top: 18px;
+        width: 432px;
+    }
+    .livesports h6{
+        margin: 10px 0 0 0;
+    }
+    .plan-header{
+        padding: 80px 0 40px 0;
+        text-align: center;
+        color: white;
+    }
+    .plan-header h1{
+        font-size: 48px;
+        margin-bottom: 16px;
+    }
+    .plan-header h3{
+        font-size: 18px;
+        font-weight: 400;
+    }
+    .plan-table{
+        margin: 10px auto;
+        width: fit-content;
+    }
+    .base-bundle-plan2{
+        display: none;
+    }
+    .base-bundle-plan{
+        height: 215px;
+        width: 375px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 0 10px 0;
+        box-sizing: border-box;
+        margin: 0;
+    }
+    .plan-table-header{
+        width: 100%;
+        height: fit-content;
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+        display: flex;
+        position: sticky;
+        top: 0;
+        background-color: #0b0c0f;
+    }
+    .hulu-plan-header{
+        display: flex;
+    }
+    .hulu-with-ads{
+        width: 262px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .hulu-with-ads p{
+        margin: 0 auto 30px auto;
+        background-color: #1ce783;
+        font-size: 9px;
+        color: black;
+        width: fit-content;
+        padding: 7px 15px;
+        border-radius: 20px;
+        font-weight: bold;
+    }
+    .hulu-with-ads h3{
+        color: #bec0c2;
+        font-size: 14px;
+        margin: 16px 0 5px 0;
+    }
+    .hulu-with-ads h4{
+        font-size: 18px;
+        color: white;
+        margin: 0 0 13px 0;
+    }
+    .hulu-with-ads button{
+        padding: 16.5px 76px;
+        border-radius: 5px;
+        border: none;
+        font-weight: bold;
+    }
+    .hulu-no-ads{
+        width: 262px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .hulu-no-ads h3{
+        color: #bec0c2;
+        font-size: 14px;
+        margin: 16px 0 5px 0;
+    }
+    .hulu-no-ads h4{
+        font-size: 18px;
+        color: white;
+        margin: 0 0 13px 0;
+    }
+    .hulu-no-ads button{
+        padding: 16.5px 76px;
+        border-radius: 5px;
+        border: none;
+        font-weight: bold;
+    }
+    .plan-price{
+        height: fit-content;
+        border-bottom: 1px solid white;
+        display: flex;
+        color: white;
+        font-size: 14px;
+    }
+    .plan-col-a{
+        width: 375px;
+        padding: 20px 0;
+    }
+    .plan-col{
+        display: flex;
+    }
+    .plan-col-b{
+        width: 262px;
+        padding: 20px 0;
+        text-align: center;
+    }
+    .plan-line{
+        height: fit-content;
+        border-bottom: 1px solid white;
+        display: flex;
+        color: white;
+        font-size: 14px;
+    }
+    .line-col-a{
+        width: 375px;
+        padding: 20px 0;
+    }
+    .line-col-b{
+        width: 262px;
+        padding: 20px 0;
+        text-align: center;
+        color: #1ce783;
+    }
+    .plan-info{
+        height: 90px;
+        border-bottom: 1px solid white;
+        display: flex;
+        color: white;
+        font-size: 10px;
+        padding: 10px 0 0 10px;
+    }
+    .footermenu{
+        padding: 32px 0;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid gray;
+    }
+    .browse-header{
+        font-size: 12px;
+    }
+    .browse-header p{
+        display: none;
+    }
+    .browse-menus{
+        display: flex;
+        width: 700px;
+        justify-content: space-between;
+    }
+    .help-header{
+        font-size: 12px;
+    }
+    .help-header p{
+        display: none;
+    }
+    .about-header{
+        font-size: 12px;
+    }
+    .about-header p{
+        display: none;
+    }
+    .footer-links span{
+        margin: 0 32px 32px 0;
+        padding: 20px 0;
+    }
+    /* hulu redirect html file css*/
+    .hulu-redirect-card{
+        border: 1px solid gray;
+        border-radius: 15px;
+        margin: 20px 0;
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        text-align: center;    
+    }
+}
+
+
+
+
+@media (max-width: 586px){
+    .header-head{
+        width: 100%;
+        /* padding: 10px 10px 0 10px; */
+    }
+    .logo{
+        width: 61px;
+        height: 24px;
+        margin: 25px 0 0 24px;
+    }
+    .header-head h3{
+        color: #a8afbd;
+        font-size: 15px;
+        margin: 20px 24px 0 0;
+    }
+    .header-tag h5{
+        color: #00d876;
+        font-weight: 800;
+        margin: 35px 0 13px 0;
+        text-align: center;
+        font-size: 12px;
+        padding: 0;
+    }
+    .header-body{
+        width: 100%;
+        text-align: center;
+        padding: 0 40px 40px 40px;
+        box-sizing: border-box;
+    }
+    .bundle-img{
+        width: 320px;
+    }
+    .header-body h3{
+        color: white;
+        font-size: 18px;
+        margin: 6px 0 0 0;
+    }
+    .header-body button{
+        background-color: #00d876;
+        border: none;
+        padding: 16px 34%;
+        border-radius: 5px;
+        font-weight: 750;
+        margin: 28px 0 0 0;
+        font-size: 14px;
+    }
+    .header-body p{
+        color: white;
+        text-decoration: underline;
+        font-size: 14.5px;
+        margin: 18px 0;
+    }
+    .header-body h4{
+        color: white;
+        text-decoration: underline;
+        font-weight: 400;
+        margin: 31px 0 0 0;
+    }
+    .header-body br{
+        display: none;
+    }
+    .header-ribbon{
+        width: 100%;
+        height: fit-content;
+        /* display: flex; */
+        padding: 25px 40px;
+        box-sizing: border-box;
+        background-color: transparent;
+        text-align: center;
+    }
+    .bundle-h5{
+        font-size: 12px;
+        color: #00d876;
+        font-weight: bolder;
+        margin: 3px 0;
+    }
+    .header-ribbon img{
+        width: 180px;
+        margin: 5px;
+    }
+
+    .ribbon-desc{
+        /* margin: 0 auto; */
+    }
+    .ribbon-desc h3{
+        color: white;
+        font-size: 16px;
+        font-weight: 400;
+        margin: 0;
+    }
+    .ribbon-btns{
+        text-align: center;
+        padding: 15px 10px 0 20px;
+    }
+    .ribbon-btns button{
+        color: white;
+        background-color: transparent;
+        padding: 14px 24px;
+        font-size: 14px;
+        font-weight: bold;
+        border: 2px solid white;
+        border-radius: 5px;
+    }
+    .ribbon-btns p{
+        color: white;
+        text-decoration: underline;
+        font-size: 10px;
+        margin: 5px 0 0 0;
+    }
+    .container{
+        width: 100%;
+        height: fit-content;
+        background-color: #0b0c0f;
+        padding-top: 50px;
+        padding-bottom: 30px;
+        position: relative;
+    }
+    .container-desc h1{
+        font-size: 32px;
+        margin: 18px;
+    }
+    .container-desc p{
+        font-size: 16px;
+        margin: 0 8px;
+    }
+    .container-card{
+        height: fit-content;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 10px 20px 0 20px;
+        box-sizing: border-box;
+    
+    }
+    .card{
+        position: relative;
+        width: 138px;
+        height: 237px;
+        box-sizing: border-box;
+        margin: 10px 0;
+    
+    }
+    .card img{
+        height: 100%;
+        filter: brightness(50%);
+        box-sizing: border-box;
+    }
+    .intro{
+        padding: 100px 0 50px 0;
+        height: 500px;
+        color: white;
+        text-align: center;
+    }
+    .intro h5{
+        font-size: 12px;
+        color: #00d876;
+    }
+    .intro h1{
+        font-size: 32px;
+    }
+    .intro p{
+        font-size: 16px;
+        /* width: 290px; */
+        margin: 0 30px;
+        line-height: 25px;
+    }
+    .intro h6{
+        font-size: 10px;
+        /* width: 290px; */
+        padding: 15px 20px;
+        margin: 0 auto;
+        font-weight: 400;
+        color: #ffffff99;
+        line-height: 15px;
+    }
+    .intro h4{
+        font-size: 12px;
+        text-decoration: underline;
+        margin: 0;
+    }
+    .intro h3{
+        margin: 50px 0;
+    }
+    .livesports{
+        color: #ffffff;
+        width: 100%;
+        height: 700px;
+        background-image: url('https://cnbl-cdn.bamgrid.com/assets/58fb35f9ec229ad8366a5c95a78003e1406315670a6882aa5d0bf1c34a72fe91/original');
+        background-repeat: no-repeat;
+        background-size:  cover;
+        background-position: top center; 
+        box-sizing: border-box;
+        padding: 50px 0 0 0;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    .livesports-tabs{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 0 0 0 10px;
+        box-sizing: border-box;
+    }
+    .livesports h1{
+        font-size: 32px;
+        margin: 0;
+        margin-top: 80px;
+    }
+    .livesports p{
+        font-size: 16px;
+        margin:0 20px 18px 20px;
+        line-height: 25px;
+        /* width: 232px; */
+    }
+    .livesports h6{
+        margin: 30px 40px 0 40px;
+        font-size: 10px;
+        color: #ffffff99;
+
+    }
+    .livesports span{
+        text-decoration: underline;
+    }
+    .plan-header{
+        padding: 40px 0 40px 0;
+        text-align: center;
+        color: white;
+    }
+    .plan-header h1{
+        font-size: 32px;
+        margin: 0;
+        margin-bottom: 16px;
+    }
+    .plan-header h3{
+        font-size: 16px;
+        font-weight: 400;
+        margin: 0;
+    }
+    .plan-table{
+        margin: 10px auto;
+        width: 100%;
+    }
+    .base-bundle-plan2{
+        border-top: 1px solid gray;
+    }
+    .base-bundle-plan{
+        height: fit-content;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
+        box-sizing: border-box;
+        margin: 0;
+        border-bottom: 1px solid gray;
+    }
+    .plan-table-header{
+        width: 100%;
+        height: fit-content;
+        border-top: 1px solid gray;
+        border-bottom: 1px solid gray;
+        /* display: flex; */
+        position: sticky;
+        top: 0;
+        background-color: #0b0c0f;
+    }
+    .plan-table-header .base-bundle-plan{
+        display: none;
+    }
+    .hulu-plan-header{
+        width: 100%;
+        display: flex;
+    }
+    .hulu-with-ads{
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 0 31px 0;
+        border-right: 1px solid gray;
+    }
+    .hulu-with-ads p{
+        margin: 0 auto 20px auto;
+        background-color: #1ce783;
+        font-size: 9px;
+        color: black;
+        width: fit-content;
+        padding: 7px 15px;
+        border-radius: 20px;
+        font-weight: bold;
+    }
+    .hulu-with-ads h3{
+        color: #bec0c2;
+        font-size: 10px;
+        margin: 10px 0 5px 0;
+    }
+    .hulu-with-ads h4{
+        font-size: 14px;
+        color: white;
+        margin: 15px 0 13px 0;
+    }
+    .hulu-with-ads button{
+        width: 100%;
+        padding: 12.5px 31.83px;
+        border-radius: 5px;
+        border: none;
+        font-weight: bold;
+        border-right: 1px solid gray;
+    }
+    .hulu-no-ads{
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 0 31px 0;
+    }
+    .hulu-no-ads h3{
+        color: #bec0c2;
+        font-size: 10px;
+        margin: 16px 0 5px 0;
+    }
+    .hulu-no-ads h4{
+        font-size: 14px;
+        color: white;
+        margin: 0 0 13px 0;
+    }
+    .hulu-no-ads button{
+        width: 100%;
+        padding: 12.5px 31.83px;
+        border-radius: 5px;
+        border: none;
+        font-weight: bold;
+    }
+    .plan-price{
+        height: fit-content;
+        border-bottom: 1px solid gray;
+        /* display: flex; */
+        color: white;
+        font-size: 14px;
+    }
+    .plan-col-a{
+        width: 100%;
+        padding: 20px 0;
+        text-align: center;
+    }
+    .plan-col{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .plan-col-b{
+        width: 50%;
+        padding: 20px 0;
+        text-align: center;
+    }
+    .plan-line{
+        height: fit-content;
+        border-bottom: 1px solid gray;
+        /* display: flex; */
+        color: white;
+        font-size: 14px;
+    }
+    .line-col-a{
+        width: 100%;
+        padding: 20px 0;
+        text-align: center;
+    }
+    .line-col-b{
+        width: 50%;
+        padding: 20px 0;
+        text-align: center;
+        color: #1ce783;
+    }
+    .plan-info{
+        height: 90px;
+        border-bottom: 1px solid white;
+        display: flex;
+        color: white;
+        font-size: 10px;
+        padding: 10px 0 0 10px;
+        justify-content: center;
+    }
+    .plan-info span{
+        text-align: center;
+    }
+    .footermenu{
+        padding: 32px 0;
+        /* display: flex; */
+        justify-content: space-between;
+        border-bottom: 2px solid lightgray;
+    }
+    .browse{
+        padding: 32px 0 0 0;
+        border-bottom: 1px solid lightgray;
+    }
+    .browse-header{
+        font-size: 12px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .browse-menus{
+        display: none;
+        /* width: 700px;
+        justify-content: space-between; */
+    }
+    .help{
+        padding: 32px 0 0 0;
+        border-bottom: 1px solid lightgray;
+    }
+    .help-header{
+        font-size: 12px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .help-menus{
+        display: none;
+    }
+    .about{
+        padding: 32px 0 0 0;
+        border-bottom: 1px solid lightgray;
+    }
+    .about-header{
+        font-size: 12px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .about-menus{
+        display: none;
+    }
+    .footer-links span{
+        margin: 0 32px 32px 0;
+        padding: 32px 0;
+        line-height: 30px;
+    }
+    /* hulu redirect html file css*/
+.hulu-redirect-card{
+    border: 1px solid gray;
+    border-radius: 15px;
+    margin: 20px 0 0 0;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;    
+    text-align: center;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.ribbon-desc h5{
+    font-size: 12px;
+    color: #00d876;
+    font-weight: bold;
+}
+.container-desc{
+    margin-bottom: 50px;
+    text-align: center;
+    color: white;
+    height: auto;
+}
+.container-desc h4{
+    margin: 0;
+    color: #00d876;
+    font-size: 12px;
+    font-weight: bold;
+}
+.card-badges{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 25px;
+    color: white;
+}
+.card-badges p{
+    font-size: 12px;
+    font-weight: bold;
+}
+.card-badges h2{
+    font-size: 20px;
+}
+.card-desc{
+    font-size: 10px;
+    color: white;
+    margin-right: 30px;
+    box-sizing: border-box;
+    text-align: end;
+}
+.tab1{
+    text-decoration: underline;
+    text-align: left;
+    margin-right: 37px;
+    font-size: 12px;
+}
+.tab2{
+    color: #ffffff66;
+    text-align: left;
+    margin-right: 37px;
+    font-size: 12px;
+}
+.channel-icons{
+    padding-top: 20px;
+}
+.icon{
+    width: 55px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    margin: 0 10px;
+    aspect-ratio: 3/3;
+    object-fit: contain;
+}
+.plan-name{
+    color: white;
+    font-size: 14px;
+    width: 100%;
+    margin: 0;
+}
+/* Flipswitch css start*/
+.switchbox{
+    margin: 0 15px 15px 15px;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #424957;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
+/* Flipswitch css end*/
+.base-plan{
+    width: fit-content;
+    height: 55px;
+}
+.base-plan h3{
+    width: fit-content;
+    margin: 0 0 10px 0;
+}
+
+.hulu-with-ads span{
+    width: fit-content;
+    text-align: center;
+}
+.hulu-no-ads span{
+    width: fit-content;
+    text-align: center;
+    padding-top: 38px;
+}
+.line-col-c{
+    width: 262px;
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+}
+.plan-info-showmore{
+    height: 70px;
+    border-bottom: 1px solid white;
+    display: flex;
+    color: white;
+    font-size: 16px;
+    align-items: center;
+    justify-content: center;
+}
+.footer{
+    padding: 0 44px;
+    background-color: #e8eaed;
+    color: #586174;
+}
+.browse-menus p{
+    font-size: 14px;
+}
+.help-menus p{
+    font-size: 14px;
+}
+.about-menus p{
+    font-size: 14px;
+}
+.footer-social{
+    padding: 32px 0;
+    height: fit-content;
+}
+.footer-social svg{
+    margin-right: 32px;
+}
+.footer-links{
+    padding-bottom: 32px;
+    font-size: 12px;
+}
+.header-icon a{
+    text-decoration: none;
+}
+
