@@ -64,12 +64,14 @@ function fetchData(){
 
     spinnerStatus = true
     pageLoader()
+    noteContainer.setAttribute('style', 'display:none !important')
 
     let Query = searchInput.value
     
     if(Query.length<3){
-        console.log("if executed")
-        searchInput.classList.add('isinvalid')
+        searchInput.classList.remove('is-valid')
+        searchInput.classList.add('is-invalid')
+
         alert("Please enter a valid Movie's name")
         spinnerStatus = false
         pageLoader()
@@ -77,8 +79,11 @@ function fetchData(){
         noteContainer.setAttribute('style', 'display:none !important')
     }
     else{
+        searchInput.classList.remove('is-invalid')
+        searchInput.classList.add('is-valid')
+
         introContainer.style.display = 'none'
-        noteContainer.style.display = 'block'
+        
         let apiQuery = apiKey+Query
         fetch(apiQuery).then((jsonData)=>{
             return jsonData.json()
@@ -89,6 +94,8 @@ function fetchData(){
                 pageLoader()
                 pageContainer.classList.remove('align-items-center')
                 movieContainer.style.display = 'block'
+                noteContainer.style.display = 'block'
+                errorContainer.style.display = 'none'
     
                 footer.classList.remove('fixed-bottom')
         
@@ -112,6 +119,7 @@ function fetchData(){
             }
             else{
                 errorContainer.style.display = 'block'
+                noteContainer.style.display = 'block'
                 footer.classList.remove('fixed-bottom')
                 spinnerStatus = false
                 pageLoader()
