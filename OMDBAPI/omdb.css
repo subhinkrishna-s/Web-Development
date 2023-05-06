@@ -9,12 +9,14 @@ body{
     .site-name{
       margin-left: 48px;
     }
+    .container-row{
+      box-sizing: border-box !important;
+    }
     .input-group{
       padding: 0 48px;
     }
     .movie-container{
       display: flex;
-
     }
     .movie-poster{
       width: 500px;
