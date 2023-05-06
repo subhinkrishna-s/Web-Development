@@ -1,7 +1,8 @@
 
-
+// My API key
 const apiKey = 'https://www.omdbapi.com/?i=tt3896198&apikey=c997e31e&t='
 
+// declaring required variables
 let spinnerStatus = false
 let movieTitle = document.getElementById('title')
 let movieYear = document.getElementById('year')
@@ -68,6 +69,7 @@ function fetchData(){
 
     let Query = searchInput.value
     
+    // (1) checks whether the entered value's length is lesser than 3 characters
     if(Query.length<3){
         searchInput.classList.remove('is-valid')
         searchInput.classList.add('is-invalid')
@@ -78,17 +80,22 @@ function fetchData(){
         introContainer.style.display = 'block'
         noteContainer.setAttribute('style', 'display:none !important')
     }
+    // (1) Otherwise
     else{
         searchInput.classList.remove('is-invalid')
         searchInput.classList.add('is-valid')
 
         introContainer.style.display = 'none'
         
+        // Defining API link for request - merging the entered text into apikey
         let apiQuery = apiKey+Query
+
+        // fetching the response from the api
         fetch(apiQuery).then((jsonData)=>{
             return jsonData.json()
         }).then((movieData)=>{
     
+            // on successfull response
             if(movieData.Error != 'Movie not found!'){
                 spinnerStatus = false
                 pageLoader()
@@ -117,6 +124,8 @@ function fetchData(){
                 moviePoster.src = movieData.Poster
                 console.log(movieData)
             }
+
+            // if unsucessfull Response, then display error message
             else{
                 errorContainer.style.display = 'block'
                 noteContainer.style.display = 'block'
@@ -128,6 +137,7 @@ function fetchData(){
     }
 }
 
+// function for pageloader
 function pageLoader(){
     if(spinnerStatus==false){
         // spinnerContainer.style.display = 'none'
@@ -138,6 +148,7 @@ function pageLoader(){
     }
 }
 
+// Enter key onpress event listerener for Searchbox/ Input field
 searchInput.addEventListener('keydown', function(event) {
     if (event.key == 'Enter') {
         fetchData()

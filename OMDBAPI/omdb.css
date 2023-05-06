@@ -1,6 +1,3 @@
-body{
-
-}
 
 @media (min-width: 586px){
     .icon{
@@ -25,6 +22,8 @@ body{
       font-size: 40px;
       font-weight: bolder;
     }
+
+    /* input field */
     .form-control{
       font-size: 18px;
     }
@@ -53,6 +52,8 @@ body{
       font-size: 18px;
       font-weight: bolder;
     }
+
+    /* input field */
     .form-control{
       font-size: 14px;
     }
@@ -63,7 +64,7 @@ body{
 
 
 
-
+/* Page Loader start */
 .spinner {
     width: 57.6px;
     height: 57.6px;
@@ -120,3 +121,5 @@ body{
        transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
     }
  }
+
+/* Page Loader end */
