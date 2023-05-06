@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SK - Movie Search API</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="omdb.css">
+</head>
+<body class="bg-black">
+    <div class="container-fluid d-flex justify-content-center vh-100 bg-black p-0 w-100" id="pageContainer">
+        <div class="row container-row">
+            <div class="col-11 col-md-11 col-lg-11 mx-auto text-center row-column">
+                <nav class="navbar navbar-light bg-black w-100">
+                    <div class="w-100 px-3">
+                      <a class="navbar-brand fw-bolder text-warning mx-auto d-flex justify-content-center align-items-center" href="#">
+                        <img src="images/camera-w.png" alt="" width="50" height="50" class=" d-inline-block site-icon">
+                        <h2 class="site-name text-center">SEARCH FOR MOVIES</h2>
+                      </a>
+                    </div>
+                </nav>
+                <div class="card bg-transparent text-light">
+                    <div class="card-body text-center p-0">
+                        <div class="input-group my-3">
+                            <input type="text" id="inputData" class="form-control text-black" placeholder="Enter a Movie's name" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                              <button class="btn bg-dark mx-1 text-warning border-warning fs-5" type="button" onclick="fetchData()">Search</button>
+                            </div>
+                        </div>
+                        <div class="intro-card text-light" id="intro-container">
+                            <h1 class="card-title">Want to know a Movie's complete details?</h1>
+                            <h4 class="card-text fs-6">Search a Movie's name and find the related details like directors, actors, IMDB ratings, Votes, Earnings and more interesting facts.</h4>    
+                        </div>
+                        <div class="error-container" id="errorContainer">
+                            <img class="not-found-image" src="images/not-found.png" alt="">
+                            <p class="text-danger">Movie not Found!</p>
+                        </div>
+                        <div class="spinner-container" id="spinner-container">
+                            <div class="spinner my-5 mx-auto">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <h3>Loading, Please wait...</h3>
+                        </div>
+                        <div class="movie-container w-100" id="movieContainer">
+                            <div class="movie-poster mx-auto">
+                                <img id="moviePoster" src="" alt="">
+                            </div>
+                            <div class="movie-info ms-2">
+                                <div class="card bg-transparent">
+                                    <div class="card-body text-white text-start mt-2
+                                     p-0 ps-2">
+                                        <h4 class="card-title text-warning fw-bold" id="title"></h4>
+                                        <div class="data-conatiner1 my-2 d-flex">
+                                            <p class="card-text pe-2 m-0 border-dark border-end" id="year"></p>
+                                            <p class="card-text px-2 m-0 border-dark border-end" id="genre"></p>
+                                            <p class="card-text px-2 m-0" id="duration"></p>
+                                        </div>
+                                        <div class="data-conatiner2 my-2 d-flex">
+                                            <p class="card-text m-0" id="released"></p><span>&nbsp; &centerdot; &nbsp;</span>
+                                            <p class="card-text m-0" id="language"></p>
+                                        </div>
+                                        <div class="data-ratings d-flex py-2 border-dark border-top border-bottom">
+                                            <div class="imdbrate pe-4">
+                                                <p class="card-text m-0" id="imdbRate"></p>
+                                                <span class="text-warning fw-bold"></span>
+                                            </div>
+                                            <div class="criticslike px-4 border-dark border-start border-end">
+                                                <p class="card-text m-0" id="criticsLike"></p>
+                                                <span class="text-warning fw-bold"></span>
+                                            </div>
+                                            <div class="metaScore px-4">
+                                                <p class="card-text m-0" id="Metascore"></p>
+                                                <span class="text-warning fw-bold"></span>
+                                            </div>
+                                        </div>
+                                        <div class="story my-2 d-flex">
+                                            <span>~  &nbsp; &nbsp;</span>
+                                            <p class="card-text m-0" id="Story"></p>
+                                        </div>
+                                        <div class="director my-2 d-flex">
+                                            <span class="text-warning fw-bold">Director(s):&nbsp;</span>
+                                            <p class="card-text" id="Director"></p>
+                                        </div>
+                                        <div class="writer my-2 d-flex">
+                                            <span class="text-warning fw-bold">Writer(s):&nbsp;</span>
+                                            <p class="card-text" id="Writer"></p>
+                                        </div>
+                                        <div class="actors my-2 d-flex">
+                                            <span class="text-warning fw-bold">Actors:&nbsp;</span>
+                                            <p class="card-text" id="Actor"></p>
+                                        </div>
+                                        <div class="awards my-2 d-flex">
+                                            <span class="text-warning fw-bold">Awards:&nbsp;</span>
+                                            <p class="card-text" id="Award"></p>
+                                        </div>
+                                        <div class="boxoffice my-2 d-flex">
+                                            <span class="text-warning fw-bold">Box-Office Collection:&nbsp;</span>
+                                            <p class="card-text" id="Boxoffice"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="note d-flex justify-content-center border-top my-2" id="note-container">
+                            <span>Note: &nbsp;</span>
+                            <p class="m-0 text-warning">This information is sourced from the OMDB Database.</p>
+                        </div>
+                        <div class="footer d-flex justify-content-center border-top mb-2" id="footer">
+                            <p class="m-0">Copyright 2023 © Subhin Krishna</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="omdb.js"></script>
+</body>
+</html>
