@@ -1,0 +1,21 @@
+.books{
+  background-color: #116A7B;
+  color: #FDB833;
+  text-align: center;
+}
+.books h1{
+  margin: 0;
+  text-decoration: underline;
+  padding: 20px 0;
+  color: #051c20;
+}
+.card{
+  padding: 10px 20px;
+  border-top: 1px solid #fdb833;
+}
+.card h2{
+  margin: 0;
+}
+.card p{
+  margin: 0;
+}
