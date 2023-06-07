@@ -1,0 +1,34 @@
+.books{
+  color: #FDB833;
+  text-align: center;
+  background-color: #0cd7ff;
+}
+.books h1{
+  margin: 0;
+  text-decoration: underline;
+  padding: 20px 0;
+  color: #051c20;
+}
+.card-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card{
+  padding: 10px 20px;
+  border-left: 15px solid #fdb833;
+  background-color: #072c34;
+  margin: 10px;
+  width: 400px;
+  height: 120px;
+  border-radius: 0 13px 13px 0;
+}
+.items{
+  color: #1b7e94;
+}
+.card h2{
+  margin: 0;
+}
+.card p{
+  margin: 0;
+}
